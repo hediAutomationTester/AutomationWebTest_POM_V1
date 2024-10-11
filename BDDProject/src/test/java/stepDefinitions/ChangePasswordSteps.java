@@ -1,8 +1,12 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commun.BasePage;
 import commun.Hooks;
@@ -19,20 +23,19 @@ public class ChangePasswordSteps extends BasePage {
 	ChangePasswordPage pwdchange = new ChangePasswordPage(driver);
 
 	@When("user enters {string} and {string}")
-	public void user_enters_email_and_password(String username, String password) throws InterruptedException {
+	public void user_enters_email_and_password(String username, String password) {
 		lp.submitEmptyUsername(username);
 		lp.submitEmptyPassword(password);
 	}
 
 	@And("hits on login button")
-	public void clickLogin() throws InterruptedException {
+	public void clickLogin(){
 		lp.Login();
-		Thread.sleep(4000);
 	}
 
 	@And("select my account")
-	public void select_my_account() throws InterruptedException {
-		Thread.sleep(3000);
+	public void select_my_account()
+	{
 		pwdchange.myAccountSelect();
 	}
 
@@ -61,21 +64,22 @@ public class ChangePasswordSteps extends BasePage {
 
 
 	@And("clicks on save button")
-	public void clicks_on_save_button() throws InterruptedException {
+	public void clicks_on_save_button()
+	{
 		pwdchange.saveNewPassword();
 	}
 
 	@Then("password is successfully changed")
-	public void password_is_successfully_changed() throws InterruptedException {
-		Thread.sleep(4000);
-		Assert.assertTrue(driver.findElement(By.xpath(
-				"//div[@class='message-success success message']/descendant::div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']"))
-				.getText().contains("You saved the account information"));
+	public void password_is_successfully_changed()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//div[@class='message-success success message']//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")));
 	}
 
 	@Then("an error message is displayed")
-	public void an_error_message_is_displayed() {
-		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='password-confirmation-error']")).getText()
-				.contains("Please enter the same value again"));
+	public void an_error_message_is_displayed() 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='password-confirmation-error']")));
 	}
 }

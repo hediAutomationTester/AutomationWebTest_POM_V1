@@ -15,12 +15,14 @@ public class ProductOrderStep extends BasePage {
 	ProductorderPage addtocart = new ProductorderPage(driver);
 
 	@When("user hits on cart link")
-	public void user_hits_on_cart_link() {
+	public void user_hits_on_cart_link()
+	{
 		addtocart.addProductToCart();
 	}
 
 	@And("hits the checkout button")
-	public void hits_the_checkout_button() {
+	public void hits_the_checkout_button() 
+	{
 		addtocart.checkoutBtn();
 	}
 	
@@ -108,7 +110,7 @@ public class ProductOrderStep extends BasePage {
 	}
 
 	@Then("purshase validation message is displayed")
-	public void purshase_validation_message() throws InterruptedException 
+	public void purshase_validation_message() throws InterruptedException
 	{
 
 		addtocart.purchaseValidation();
