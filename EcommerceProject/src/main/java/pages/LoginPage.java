@@ -13,9 +13,9 @@ public class LoginPage {
 	}
 
 	By btn_login = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/a");
-	By txt_email = By.xpath("//form[@class='form form-login']/descendant::input[@id='email']");
-	By txt_password = By.xpath("//form[@class='form form-login']/descendant::input[@id='pass']");
-	By btn_signin = By.xpath("//form[@id='login-form']/descendant::button[@class='action login primary']");
+	By txt_email = By.xpath("//form[@class='form form-login']//input[@id='email']");
+	By txt_password = By.xpath("//form[@class='form form-login']//input[@id='pass']");
+	By btn_signin = By.xpath("//form[@id='login-form']//button[@class='action login primary']");
 	By btn_myAccount = By.xpath("//div[@class='panel header']//button[@type='button']");
 	By option_myAccount = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[1]/a");
 	By btn_signout = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a");

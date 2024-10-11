@@ -18,8 +18,8 @@ public class RegistrationTest extends TestBase{
 
 	RegistrationPage rp ;
 	String firstname = "MICHEL";
-	String lastname = "ZOUL";
-	String email = "test.myppBaz9993@gmail.com";
+	String lastname = "ZOULA";
+	String email = "test.myppa9995@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd = "123456aB.";
 

@@ -15,7 +15,7 @@ public class ProductSearchTest extends TestBase {
 	LoginPage lp;
 	String productName = "Jacket";
 	String nbr= "2";
-	String email = "test.myppBaz9991@gmail.com";
+	String email = "test.myppa9995@gmail.com";
 	String newpwd = "123456aB.";
 	String qty = "2";
 

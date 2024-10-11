@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="EcommercePomTestSuite">
-  <test name="testng" preserve-order="true">
-    <classes>
+<suite name="EcommercePomSuite">
+  <test name="chromeTest" preserve-order="true">
+	<parameter name="browser" value="chrome"></parameter> 
+	   <classes>
+		<class name="tests.RegistrationTest"/>
+		<class name="tests.LoginTest"/>
+		<class name="tests.ProductSearchTest"/>
+        <class name="tests.AddProductToCartTest"/>
+        <class name="tests.ProductOrderTest"/>
+    </classes>
+  </test>
+  <test name="firefoxTest" preserve-order="true">
+	<parameter name="browser" value="firefox"></parameter> 
+	   <classes>
+		<class name="tests.RegistrationTest"/>
+		<class name="tests.LoginTest"/>
+		<class name="tests.ProductSearchTest"/>
+        <class name="tests.AddProductToCartTest"/>
+        <class name="tests.ProductOrderTest"/>
+    </classes>
+  </test>
+  <test name="edgeTest" preserve-order="true">
+	<parameter name="browser" value="edge"></parameter> 
+	   <classes>
 		<class name="tests.RegistrationTest"/>
 		<class name="tests.LoginTest"/>
 		<class name="tests.ProductSearchTest"/>
