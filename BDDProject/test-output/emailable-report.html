@@ -9,19 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">38 800</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">85 971</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testng.runner.RunCucumberTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1728652753084</td><td rowspan="1">35862</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testng.runner.RunCucumberTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1728664952559</td><td rowspan="1">84747</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testng.runner.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Check User Can Order Product&quot;</td><td>&quot;Product Order Fonctionalty&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+<h2>Default test</h2><h3 id="m0">testng.runner.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Check User Can Order Product&quot;</td><td>&quot;Product Order Fonctionalty&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;action primary checkout&quot; type=&quot;submit&quot; data-bind=&quot;
+                        click: placeOrder,
+                        attr: {title: $t(&apos;Place Order&apos;)},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())
+                        &quot; title=&quot;Place Order&quot;&gt;...&lt;/button&gt; is not clickable at point (899, 396). Other element would receive the click: &lt;div class=&quot;checkout-billing-address&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=129.0.6668.100)
 Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1361751d4a7af8fa599d09f1f1675e0f, clickElement {id=f.D10F21D81E647589872D98864120C073.d.BCEEFC9F0140E5B298DC782A49E674B6.e.417}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58118/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1361751d4a7af8fa599d09f1f1675e0f)] -&gt; id: top-cart-btn-checkout]
-Session ID: 1361751d4a7af8fa599d09f1f1675e0f
+Command: [1476bd6515570882fcdc24a79c045fff, clickElement {id=f.D1D1E9CD708A134CF92C3B8F6F439954.d.9C90335A737FDA17BCC0A6AE210A15AE.e.691}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52534}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52534/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1476bd6515570882fcdc24a79c045fff)] -&gt; xpath: //form[@id=&apos;co-payment-form&apos;]//button[@class=&apos;action primary checkout&apos;]]
+Session ID: 1476bd6515570882fcdc24a79c045fff
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -35,9 +40,9 @@ Session ID: 1361751d4a7af8fa599d09f1f1675e0f
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.ProductorderPage.checkoutBtn(ProductorderPage.java:52)
-	at stepDefinitions.ProductOrderStep.hits_the_checkout_button(ProductOrderStep.java:24)
-	at ✽.hits the checkout button(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/5.productOrder.feature:16)
+	at pages.ProductorderPage.placeholderBtn(ProductorderPage.java:141)
+	at stepDefinitions.ProductOrderStep.hits_the_placeholder_button(ProductOrderStep.java:109)
+	at ✽.hits the placeholder button(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/5.productOrder.feature:29)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

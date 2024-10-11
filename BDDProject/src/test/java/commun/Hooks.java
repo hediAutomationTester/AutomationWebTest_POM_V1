@@ -15,8 +15,6 @@ public class Hooks extends BasePage{
 	public static void setUpDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-search-engine-choice-screen");
-		options.addArguments("--disable-ads");
-		options.addArguments("--disable_popup-blocking");
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.get("https://magento.softwaretestingboard.com/");

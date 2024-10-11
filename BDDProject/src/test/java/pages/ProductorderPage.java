@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class ProductorderPage {
 
@@ -26,15 +25,15 @@ public class ProductorderPage {
 	By email_txt = By.xpath("//form[@class='form form-login']//input[1]");
 	By password_txt = By.xpath("//form[@class='form form-login']//input[2]");
 	By login_btn = By.xpath("//form[@data-role='login']//button[@class='action action-login secondary']");
-	By company_txt = By.xpath("//form[@id='co-shipping-form']//input[3]");
-	By street_txt = By.xpath("//form[@id='co-shipping-form']//input[4]");
+	By company_txt = By.xpath("//form[@id='co-shipping-form']//input[1][@name='company']");
+	By street_txt = By.xpath("//form[@id='co-shipping-form']//input[1][@name='street[0]']");
 	By street2_txt = By.xpath("//form[@id='co-shipping-form']//input[5]");
 	By street3_txt = By.xpath("//form[@id='co-shipping-form']//input[6]");
-	By city_txt = By.xpath("//form[@id='co-shipping-form']//input[7]");
+	By city_txt = By.xpath("//form[@id='co-shipping-form']//input[1][@name='city']");
 	By province_select = By.xpath("//form[@id='co-shipping-form']//select[@name='region_id']");
-	By zip_txt = By.xpath("//form[@id='co-shipping-form']//input[9]");
+	By zip_txt = By.xpath("//form[@id='co-shipping-form']//input[@name='postcode']");
 	By country_select = By.xpath("//form[@id='co-shipping-form']//select[@name='country_id']");
-	By phone_txt = By.xpath("//form[@id='co-shipping-form']//input[10]");
+	By phone_txt = By.xpath("//form[@id='co-shipping-form']//input[@name='telephone']");
 	By shipMethod_btn = By.xpath("//div[@id='checkout-shipping-method-load']//input[@value='tablerate_bestway']");
 	By next_btn = By.xpath("//form[@id='co-shipping-method-form']//button[@class='button action continue primary']");
 	By btn_shiphere = By.xpath("//footer[@class='modal-footer']//button[@class='action primary action-save-address']");
@@ -44,6 +43,8 @@ public class ProductorderPage {
 	
 	public void addProductToCart ()
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+		wait.until(ExpectedConditions.textToBe(By.cssSelector("span.counter-number"), "2"));
 		driver.findElement(cart_link).click();
 	}
 	
@@ -54,7 +55,7 @@ public class ProductorderPage {
 
 	public void userSignin()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"checkout\"]/div[1]/button")));
 		driver.findElement(signin_Btn).click();
 	}

@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-11T14:19:10 GMT+01:00" name="Default suite" finished-at="2024-10-11T14:19:49 GMT+01:00" duration-ms="38800">
+  <suite started-at="2024-10-11T17:42:31 GMT+01:00" name="Default suite" finished-at="2024-10-11T17:43:57 GMT+01:00" duration-ms="85971">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-10-11T14:19:10 GMT+01:00" name="Default test" finished-at="2024-10-11T14:19:49 GMT+01:00" duration-ms="38800">
+    <test started-at="2024-10-11T17:42:31 GMT+01:00" name="Default test" finished-at="2024-10-11T17:43:57 GMT+01:00" duration-ms="85971">
       <class name="testng.runner.RunCucumberTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T14:19:10 GMT+01:00" name="setUpClass" finished-at="2024-10-11T14:19:13 GMT+01:00" duration-ms="2432" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T17:42:31 GMT+01:00" name="setUpClass" finished-at="2024-10-11T17:42:32 GMT+01:00" duration-ms="999" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3c3c4a71]]>
+                <![CDATA[org.testng.TestRunner@59fbb34]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T14:19:13 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-11T14:19:48 GMT+01:00" duration-ms="35862" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T17:42:32 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-11T17:43:57 GMT+01:00" duration-ms="84747" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,28 +34,38 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element not interactable
+              <![CDATA[element click intercepted: Element <button class="action primary checkout" type="submit" data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Place Order')},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())
+                        " title="Place Order">...</button> is not clickable at point (899, 396). Other element would receive the click: <div class="checkout-billing-address">...</div>
   (Session info: chrome=129.0.6668.100)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1361751d4a7af8fa599d09f1f1675e0f, clickElement {id=f.D10F21D81E647589872D98864120C073.d.BCEEFC9F0140E5B298DC782A49E674B6.e.417}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58118/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1361751d4a7af8fa599d09f1f1675e0f)] -> id: top-cart-btn-checkout]
-Session ID: 1361751d4a7af8fa599d09f1f1675e0f]]>
+Command: [1476bd6515570882fcdc24a79c045fff, clickElement {id=f.D1D1E9CD708A134CF92C3B8F6F439954.d.9C90335A737FDA17BCC0A6AE210A15AE.e.691}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52534}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52534/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1476bd6515570882fcdc24a79c045fff)] -> xpath: //form[@id='co-payment-form']//button[@class='action primary checkout']]
+Session ID: 1476bd6515570882fcdc24a79c045fff]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="action primary checkout" type="submit" data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Place Order')},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())
+                        " title="Place Order">...</button> is not clickable at point (899, 396). Other element would receive the click: <div class="checkout-billing-address">...</div>
   (Session info: chrome=129.0.6668.100)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1361751d4a7af8fa599d09f1f1675e0f, clickElement {id=f.D10F21D81E647589872D98864120C073.d.BCEEFC9F0140E5B298DC782A49E674B6.e.417}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58118}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58118/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1361751d4a7af8fa599d09f1f1675e0f)] -> id: top-cart-btn-checkout]
-Session ID: 1361751d4a7af8fa599d09f1f1675e0f
+Command: [1476bd6515570882fcdc24a79c045fff, clickElement {id=f.D1D1E9CD708A134CF92C3B8F6F439954.d.9C90335A737FDA17BCC0A6AE210A15AE.e.691}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52534}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52534/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1476bd6515570882fcdc24a79c045fff)] -> xpath: //form[@id='co-payment-form']//button[@class='action primary checkout']]
+Session ID: 1476bd6515570882fcdc24a79c045fff
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -69,16 +79,16 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at pages.ProductorderPage.checkoutBtn(ProductorderPage.java:52)
-at stepDefinitions.ProductOrderStep.hits_the_checkout_button(ProductOrderStep.java:24)
-at ✽.hits the checkout button(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/5.productOrder.feature:16)
+at pages.ProductorderPage.placeholderBtn(ProductorderPage.java:141)
+at stepDefinitions.ProductOrderStep.hits_the_placeholder_button(ProductOrderStep.java:109)
+at ✽.hits the placeholder button(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/5.productOrder.feature:29)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T14:19:48 GMT+01:00" name="tearDownClass" finished-at="2024-10-11T14:19:49 GMT+01:00" duration-ms="330" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-11T17:43:57 GMT+01:00" name="tearDownClass" finished-at="2024-10-11T17:43:57 GMT+01:00" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

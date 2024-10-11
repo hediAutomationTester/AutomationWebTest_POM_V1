@@ -67,7 +67,7 @@ public class AutoSuggestSearcAndAddToCartStep extends BasePage {
 	@Then("the product is added to cart")
 	public void the_product_is_added_to_cart() 
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.counter-number"))).getText().contentEquals("2");
 	}
 }
