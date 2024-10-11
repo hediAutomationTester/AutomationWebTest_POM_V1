@@ -9,11 +9,13 @@
           <include name="FinishShipping"/>
           <include name="EditShipping"/>
           <include name="tearDown"/>
+          <include name="Login"/>
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.ProductOrderTest -->
       <class name="tests.LoginTest">
         <methods>
+          <include name="SignOut"/>
           <include name="InvalidEmailLogin"/>
           <include name="ValidCredentialsLogin"/>
           <include name="EmptyCredentialsLogin"/>
@@ -22,13 +24,30 @@
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.LoginTest -->
+      <class name="tests.AddProductToCartTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AddToCartProduct"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.AddProductToCartTest -->
       <class name="tests.RegistrationTest">
         <methods>
           <include name="tearDown"/>
           <include name="ChangePassword"/>
           <include name="StartDriver"/>
+          <include name="Registration"/>
         </methods>
       </class> <!-- tests.RegistrationTest -->
+      <class name="tests.ProductSearchTest">
+        <methods>
+          <include name="ChooseProduct"/>
+          <include name="SearchProduct"/>
+          <include name="tearDown"/>
+          <include name="StartDriver"/>
+          <include name="SortProduct"/>
+        </methods>
+      </class> <!-- tests.ProductSearchTest -->
     </classes>
   </test> <!-- chromeTest(failed) -->
   <test thread-count="5" name="firefoxTest(failed)">
