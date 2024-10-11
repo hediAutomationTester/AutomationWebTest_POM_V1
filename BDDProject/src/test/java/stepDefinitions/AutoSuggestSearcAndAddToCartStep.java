@@ -1,7 +1,11 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import commun.BasePage;
@@ -21,7 +25,7 @@ public class AutoSuggestSearcAndAddToCartStep extends BasePage {
 	@Given("user is on home page")
 	public void user_is_on_home_page() 
 	{
-		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='search_mini_form']/descendant::input[@class='input-text']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='search_mini_form']//input[@class='input-text']")).isDisplayed());
 	}
 
 	@When("user enters a part of productname {string} in the search box")
@@ -55,15 +59,15 @@ public class AutoSuggestSearcAndAddToCartStep extends BasePage {
 	}
 	
 	@And("clicks add to cart button")
-	public void clicks_add_to_cart_button() throws InterruptedException 
+	public void clicks_add_to_cart_button() 
 	{
 		ps.addToCart();
-		Thread.sleep(3000);
 	}
 	
 	@Then("the product is added to cart")
 	public void the_product_is_added_to_cart() 
 	{
-		Assert.assertTrue(driver.findElement(By.cssSelector("span.counter-number")).getText().contentEquals("2"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		wait .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.counter-number"))).getText().contentEquals("2");
 	}
 }

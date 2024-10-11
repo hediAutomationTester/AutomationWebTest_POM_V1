@@ -15,7 +15,7 @@ Feature: Product Order Fonctionalty
     When user hits on cart link
     And hits the checkout button
     And hits the sign in button
-    And enters the email "Moez937.Benchkir@test.fr"
+    And enters the email "Moez948.Benchkir@test.fr"
     And enters the password "123456Ab-"
     And hits the login button
     And enters company "coding"
