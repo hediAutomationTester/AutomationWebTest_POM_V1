@@ -16,7 +16,7 @@ import pages.LoginPage;
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String email = "test.myppa9995@gmail.com";
+	String email = "test.myppa9997@gmail.com";
 	String validpwd = "123456Ab.";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";

@@ -5,7 +5,8 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="InvalidPasswordLogin"/>
+          <include name="SignOut"/>
+          <include name="ValidCredentialsLogin"/>
           <include name="tearDown"/>
           <include name="StartDriver"/>
         </methods>
