@@ -14,7 +14,7 @@ public class AutoSuggestSearchAndAddToCartPage {
 	}
 
 	By txt_searchbox = By.xpath("//form[@id='search_mini_form']/descendant::input[@class='input-text']");
-	By option_select = By.id("qs-option-3");
+	By option_select = By.id("qs-option-2");
 	By select_product = By.id("sorter");
 	By btn_product = By.xpath("//*[@id='maincontent']/descendant::img[@alt='Lando Gym Jacket']");
 	By btn_size = By.id("option-label-size-143-item-169");

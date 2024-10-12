@@ -11,8 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = { "commun", "pages", "stepDefinitions",
 		"testng.runner" }, plugin = { "pretty", "html:target/HtmlReports/index.html",
 				"json:target/JsonReports/report.json",
-				"junit:target/JUnitReports/report.xml" }, monochrome = true, 
-				tags = "@ProductOrder")
+				"junit:target/JUnitReports/report.xml" }, monochrome = true)
 
 public class RunCucumberTest {
 

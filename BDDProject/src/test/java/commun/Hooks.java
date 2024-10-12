@@ -17,11 +17,10 @@ public class Hooks extends BasePage{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-search-engine-choice-screen");
 		options.addArguments("--disable-notifications");
-		options.addArguments("--disable-extentions");
-		options.addArguments("--disable-popup-blocking");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-infobars");
 		driver= new ChromeDriver(options);
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.get("https://magento.softwaretestingboard.com/");
 		driver.manage().window().maximize();
