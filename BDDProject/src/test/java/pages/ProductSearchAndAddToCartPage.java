@@ -42,7 +42,7 @@ public class ProductSearchAndAddToCartPage {
 		select.selectByValue("name");
 	}
 	
-	public void scrollToPaging() throws InterruptedException 
+	public void scrollToPaging() 
 	{
 		Actions action = new Actions(driver);
 		action.scrollByAmount(0,2000).build().perform();
@@ -54,7 +54,7 @@ public class ProductSearchAndAddToCartPage {
 		driver.findElement(btn_paging).click();
 	}
 	
-	public void scrollToProduct() throws InterruptedException {
+	public void scrollToProduct() {
 		Actions action = new Actions(driver);
 		action.scrollByAmount(0, 900).build().perform();
 		driver.findElement(btn_product).click();

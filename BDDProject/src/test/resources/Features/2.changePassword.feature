@@ -5,7 +5,7 @@ Feature: Change Password
 
   @ChangePassword
   Scenario: Check logged in user can change password
-    When user enters "Moez919.Benchkir@test.fr" and "123456aB-"
+    When user enters "Moez908.Benchkir@test.fr" and "123456aB-"
     And hits on login button
     And select my account
     And clicks on change password link
@@ -17,13 +17,13 @@ Feature: Change Password
 
   @OldPasswordCheck
   Scenario: Check user can not login with old password after change it
-    When user enters "Moez919.Benchkir@test.fr" and "123456aB-"
+    When user enters "Moez908.Benchkir@test.fr" and "123456aB-"
     And hits on login button
     Then a password error message should be displayed
 
   @DifferentPasswordConfirm
   Scenario: Try to enter different confirm password
-    When user enters "Moez919.Benchkir@test.fr" and "123456Ab-"
+    When user enters "Moez908.Benchkir@test.fr" and "123456Ab-"
     And hits on login button
     And select my account
     And clicks on change password link

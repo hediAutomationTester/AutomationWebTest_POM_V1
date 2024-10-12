@@ -33,7 +33,7 @@ public class SearchProductAndAddToCartStep extends BasePage{
 	}
 	
 	@And("scrolls page to paging toolbar")
-	public void scrolls_page_to_paging_toolbar() throws InterruptedException
+	public void scrolls_page_to_paging_toolbar()
 	{
 		prodsearch.scrollToPaging();
 	}
@@ -45,9 +45,8 @@ public class SearchProductAndAddToCartStep extends BasePage{
 	}
 	
 	@And("scrolls page to product")
-	public void scrolls_page_to_Lando_Gym_Jacket_product() throws InterruptedException  
+	public void scrolls_page_to_Lando_Gym_Jacket_product()  
 	{
 		prodsearch.scrollToProduct();
 	}
-
 }
