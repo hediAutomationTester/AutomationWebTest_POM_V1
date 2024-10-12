@@ -19,33 +19,39 @@ public class ChangePasswordPage {
 	By txt_passwordConfirmation = By.id("password-confirmation");
 	By btn_save = By.xpath("//*[@id=\"form-validate\"]/div/div[1]/button");
 
-	public void myAccountSelect() {
+	public void myAccountSelect()
+	{
 		driver.findElement(btn_myAccount).click();
 		driver.findElement(option_myAccount).click();
 
 	}
 
-	public void changePasswordLink() {
+	public void changePasswordLink()
+	{
 		driver.findElement(btn_changePassword).click();
 	}
 
-	public void enterCurrentPassword(String password) {
+	public void enterCurrentPassword(String password) 
+	{
 		driver.findElement(txt_currentPassword).clear();
 		driver.findElement(txt_currentPassword).sendKeys(password);
 	}
 
-	public void enterNewPassword(String newpassword) {
+	public void enterNewPassword(String newpassword)
+	{
 		driver.findElement(txt_newPassword).clear();
 		driver.findElement(txt_newPassword).sendKeys(newpassword);
 	}
 
-	public void confirmNewPassword(String newpassword) {
+	public void confirmNewPassword(String newpassword)
+	{
 		driver.findElement(txt_passwordConfirmation).clear();
 		driver.findElement(txt_passwordConfirmation).sendKeys(newpassword);
 	}
 
-	public void saveNewPassword() throws InterruptedException {
+	public void saveNewPassword()
+	{
 		driver.findElement(btn_save).click();
-		Thread.sleep(3000);
+	
 	}
 }
