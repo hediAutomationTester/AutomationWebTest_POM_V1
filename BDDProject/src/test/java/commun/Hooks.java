@@ -2,6 +2,9 @@ package commun;
 
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,9 +19,10 @@ public class Hooks extends BasePage{
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-search-engine-choice-screen");
-		options.addArguments("--disable-notifications");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-infobars");
+		Map<String, Object> networkPrefs = new HashMap<>();
+		networkPrefs.put("urls", Arrays.asList("*://*.googleads.g.doubleclick.net/*", "*://*.googlesyndication.com/*"));
+		options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-logging"));
+		options.setExperimentalOption("prefs", networkPrefs);
 		driver= new ChromeDriver(options);
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
@@ -29,6 +33,6 @@ public class Hooks extends BasePage{
 	@After
 	public static void quitDriver() 
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

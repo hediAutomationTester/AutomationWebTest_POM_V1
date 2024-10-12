@@ -1,6 +1,12 @@
 package stepDefinitions;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import commun.BasePage;
 import commun.Hooks;
@@ -15,12 +21,14 @@ public class ProductOrderStep extends BasePage {
 	ProductorderPage addtocart = new ProductorderPage(driver);
 
 	@When("user hits on cart link")
-	public void user_hits_on_cart_link() {
+	public void user_hits_on_cart_link()
+	{
 		addtocart.addProductToCart();
 	}
 
 	@And("hits the checkout button")
-	public void hits_the_checkout_button() {
+	public void hits_the_checkout_button() 
+	{
 		addtocart.checkoutBtn();
 	}
 	
@@ -102,15 +110,17 @@ public class ProductOrderStep extends BasePage {
 	}
 	
 	@And("hits the placeholder button")
-	public void hits_the_placeholder_button() throws InterruptedException 
+	public void hits_the_placeholder_button()
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='co-payment-form']//button[@class='action primary checkout']")));
 		addtocart.placeholderBtn();
 	}
 
 	@Then("purshase validation message is displayed")
-	public void purshase_validation_message() throws InterruptedException 
+	public void purshase_validation_message()
 	{
-
-		addtocart.purchaseValidation();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='page-title-wrapper']//h1[@class='page-title']")));
 	}
 }
