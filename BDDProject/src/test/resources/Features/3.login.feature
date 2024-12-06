@@ -11,7 +11,7 @@ Feature: login functionality
 
     Examples: 
       | username              | password  |
-      | Moez908.Benchkir@test.fr | 123456Ab- |
+      | Moez9009.Benchkir@test.fr | 123456Ab- |
 
   @InvalidCredentials
   Scenario Outline: Check login with invalid e-mail and valid password
@@ -44,9 +44,9 @@ Feature: login functionality
 
     Examples: 
       | username              | password  |
-      | Moez908.Benchkir@test.fr | abcdefgh  |
-      | Moez908.Benchkir@test.fr | 123456789 |
-      | Moez908.Benchkir@test.fr | 1234Ab-   |
+      | Moez9009.Benchkir@test.fr | abcdefgh  |
+      | Moez9009.Benchkir@test.fr | 123456789 |
+      | Moez9009.Benchkir@test.fr | 1234Ab-   |
 
   @InvalidCredentials
   Scenario: Check login with empty credentials

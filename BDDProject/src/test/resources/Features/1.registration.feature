@@ -7,7 +7,7 @@ Feature: Registration Fonctionality
   Scenario: Check registration with all required fields
     When user enters firstname "Moez"
     And enters lastname "Chkir"
-    And enters email "Moez9008.Benchkir@test.fr"
+    And enters email "Moez9009.Benchkir@test.fr"
     And enters password "123456aB-"
     And enters a confirm password "123456aB-"
     And hits create account
@@ -17,7 +17,7 @@ Feature: Registration Fonctionality
   Scenario: Check registration when skip a required field
     When user enters firstname ""
     And enters lastname ""
-    And enters email "Moez9008.Benchkir@test.fr"
+    And enters email "Moez9009.Benchkir@test.fr"
     And enters password "123456aB-"
     And enters a confirm password "123456aB-"
     And hits create account
