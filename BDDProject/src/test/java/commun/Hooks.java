@@ -33,6 +33,6 @@ public class Hooks extends BasePage{
 	@After
 	public static void quitDriver() 
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }
